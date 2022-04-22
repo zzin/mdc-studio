@@ -1,3 +1,10 @@
 .loading {
-  @apply flex fixed w-screen h-full bg-primary z-[40] top-0;
+  @apply fixed inset-0 overflow-hidden pointer-events-none bg-transparent z-[40];
+  &--wrap {
+    @apply relative w-full h-full bg-primary will-change-auto;
+  }
+  &--title {
+    @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-white tracking-wider text-2xl w-auto;
+  }
+  // @apply flex fixed w-screen h-full bg-primary z-[40] top-0;
 }

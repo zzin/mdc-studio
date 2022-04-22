@@ -31,10 +31,12 @@
   if (is_single()) {
     if (get_field('colorLoading')) $bgLoading = get_field('colorLoading');
   }
+
+  $getTheTitle = (get_the_title()) ? get_the_title() : 'loading';
   ?>
 </head>
 
-<body <?php body_class($addClass); ?> data-barba="wrapper" data-bg="<?= $bgLoading ?>">
+<body <?php body_class($addClass); ?> data-barba="wrapper" data-bg="<?= $bgLoading ?>" data-title="<?= $getTheTitle ?>">
   <?php wp_body_open(); ?>
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'zeein'); ?></a>
@@ -75,5 +77,7 @@
     </header><!-- #masthead -->
 
     <div class="loading">
-      <strong class="loading--title">loading</strong>
+      <div class="loading--wrap">
+        <strong class="loading--title">loading</strong>
+      </div>
     </div>

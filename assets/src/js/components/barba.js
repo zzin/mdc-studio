@@ -20,8 +20,12 @@ const bodyDomClass = (data) => {
 	);
 	const bodyClasses = htmlDoc.querySelector('notbody').getAttribute('class');
 	const bodyColor = htmlDoc.querySelector('notbody').getAttribute('data-bg');
+	const getTheTitle = htmlDoc
+		.querySelector('notbody')
+		.getAttribute('data-title');
 	body.setAttribute('data-bg', bodyColor);
 	body.setAttribute('class', bodyClasses);
+	body.setAttribute('data-title', getTheTitle);
 	const navigation = data.next.html.match(
 		/<nav\sid="site-navigation"[^>]*>[.|\n]*((.|\n)*)[.|\n]*<\/nav>/
 	)[1];

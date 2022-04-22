@@ -44,15 +44,27 @@ __webpack_require__.r(__webpack_exports__);
 
 var fadeIn = function fadeIn(container) {
   console.log('fadeIn');
-  var loading = document.querySelector('.loading');
-  var bgColor = document.body.getAttribute('data-bg'); // console.log(bgColor);
-
+  var loading = document.querySelector('.loading--wrap');
+  var loadingTitle = document.querySelector('.loading--title');
+  var bgColor = document.body.getAttribute('data-bg');
+  var getTheTitle = document.body.getAttribute('data-title');
+  loadingTitle.innerHTML = getTheTitle;
   var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline();
   tl.to(loading, {
     delay: 0.25,
     backgroundColor: bgColor,
     duration: 0.75,
     ease: 'none'
+  }).to(loadingTitle, {
+    autoAlpha: 1,
+    y: '-50%',
+    duration: 0.25,
+    ease: 'Power3.easeOut'
+  }, '<').to(loadingTitle, {
+    autoAlpha: 0,
+    y: '-100%',
+    duration: 0.25,
+    delay: 0.5
   }).to(loading, {
     top: '-105%',
     duration: 1,
@@ -82,11 +94,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var fadeOut = function fadeOut(container) {
   console.log('fadeOut');
-  var loading = document.querySelector('.loading');
+  var loading = document.querySelector('.loading--wrap');
+  var loadingTitle = document.querySelector('.loading--title');
   var tl = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline();
   tl.set(loading, {
     top: '105%'
-  }).to(loading, {
+  }).set(loadingTitle, {
+    autoAlpha: 0,
+    y: '100%'
+  }) // .to(loadingTitle, { autoAlpha: 1, y: 0, duration: 0.5 })
+  .to(loading, {
     top: '0',
     duration: 1,
     delay: 0.25,
@@ -147,8 +164,10 @@ var bodyDomClass = function bodyDomClass(data) {
   var htmlDoc = parser.parseFromString(data.next.html.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', data.next.html), 'text/html');
   var bodyClasses = htmlDoc.querySelector('notbody').getAttribute('class');
   var bodyColor = htmlDoc.querySelector('notbody').getAttribute('data-bg');
+  var getTheTitle = htmlDoc.querySelector('notbody').getAttribute('data-title');
   body.setAttribute('data-bg', bodyColor);
   body.setAttribute('class', bodyClasses);
+  body.setAttribute('data-title', getTheTitle);
   var navigation = data.next.html.match(/<nav\sid="site-navigation"[^>]*>[.|\n]*((.|\n)*)[.|\n]*<\/nav>/)[1];
   var siteNavigation = document.getElementById('site-navigation');
   siteNavigation.innerHTML = navigation;

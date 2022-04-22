@@ -546,6 +546,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.pointer-events-none {
+  pointer-events: none;
+}
 .visible {
   visibility: visible;
 }
@@ -585,6 +588,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .top-\[14px\] {
   top: 14px;
+}
+.top-\[50\%\] {
+  top: 50%;
+}
+.left-\[50\%\] {
+  left: 50%;
 }
 .z-20 {
   z-index: 20;
@@ -730,6 +739,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-collapse: collapse;
 }
 .-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-x-\[50\%\] {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-\[50\%\] {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1342,14 +1359,37 @@ html a, body a, .site a {
           text-decoration-line: underline;
 }
 .loading {
+  pointer-events: none;
   position: fixed;
   top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   z-index: 40;
-  display: flex;
+  overflow: hidden;
+  background-color: transparent;
+}
+.loading--wrap {
+  position: relative;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(137 116 101 / var(--tw-bg-opacity));
+  will-change: auto;
+}
+.loading--title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  --tw-translate-x: -50%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .home .swiper .swiper-wrapper .swiper-slide {
   min-height: 100vh;
