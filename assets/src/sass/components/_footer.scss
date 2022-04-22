@@ -1,0 +1,13 @@
+.menu-wrap-footer {
+  .menu-footer-container {
+    .menu {
+      .main-menu-item {
+        .menu-link {
+          .span {
+            @apply text-white hover:underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.single {
+  .entry-header {
+    @apply h-screen w-full flex items-end justify-center fixed top-0 z-[5];
+    .entry-title {
+      @apply text-3xl lg:text-5xl text-white tracking-wider font-medium -translate-y-10 lg:-translate-y-20 transition-transform duration-500;
+    }
+  }
+  .post-thumbnail {
+    @apply h-screen w-full overflow-hidden fixed top-0 before:flex before:absolute before:bottom-0 before:left-0 before:w-full before:h-56 before:z-10 before:bg-gradient-to-t before:from-black/50;
+    img {
+      @apply h-screen w-full object-cover object-center absolute inset-0;
+    }
+  }
+  .entry-content {
+    @apply relative mt-[100vh] z-20 bg-white pb-4;
+  }
+
+  // gutenberg
+  .wp-block-image {
+    @apply mb-0;
+  }
+}

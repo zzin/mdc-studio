@@ -1,0 +1,13 @@
+.home {
+  .swiper {
+    .swiper-wrapper {
+      .swiper-slide {
+        @apply min-h-screen;
+        // @apply min-h-[calc(100vh-60px)] lg:min-h-[calc(100vh-6rem)];
+        .swiper-slide-bg {
+          @apply absolute inset-0 bg-cover bg-center bg-no-repeat;
+        }
+      }
+    }
+  }
+}

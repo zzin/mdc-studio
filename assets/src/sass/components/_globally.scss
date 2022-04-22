@@ -1,0 +1,9 @@
+html, body, .site {
+	@apply font-sans min-h-full tracking-tight;
+  .site-main {
+    @apply min-h-[calc(100vh-10rem)] lg:min-h-[calc(100vh-13rem)];
+  }
+  a {
+    @apply outline-none;
+  }
+}

@@ -1,0 +1,20 @@
+{
+	"prettier.useTabs": false,
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": true,
+	"css.lint.unknownAtRules": "ignore",
+	"scss.lint.unknownAtRules": "ignore",
+	"html.validate.styles": false,
+	"prettier.semi": true,
+	"cSpell.words": [
+		"customizer",
+		"incharge",
+		"kboard",
+		"Kyungbok",
+		"poweredby",
+		"wpdb"
+	],
+	"intelephense.diagnostics.undefinedTypes": false,
+	"intelephense.telemetry.enabled": false
+}

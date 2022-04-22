@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  .container-default {
+    @apply container mx-auto px-6 lg:px-8;
+  }
+  .container-full {
+    @apply mx-auto px-4;
+  }
+}
+
+@import './vendor/swiper';
+@import '../fonts/roboto';
+@import '../fonts/notoSansKR';
+@import './components/index';
+
