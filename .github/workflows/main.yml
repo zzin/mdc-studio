@@ -12,9 +12,9 @@ jobs:
         with:
           host: mdc.zeein.co.kr
           username: zeein
-          password: zeein39464000
+          password: ~!zeein3946400
           # key: ${{ secrets.KEY }}
-          port: 2470
+          port: 2471
           script: |
             whoami
             cd /Users/violet/htdocs/zeeincokrmdc/wp-content/themes
