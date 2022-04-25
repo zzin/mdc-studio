@@ -19,4 +19,22 @@
   .wp-block-image {
     @apply mb-0;
   }
+
+  .nav-control {
+    @apply relative flex w-full justify-between bg-white z-10 container-full;
+    &>li {
+      @apply flex-1;
+      a {
+        span {
+          @apply text-black;
+        }
+      }
+      &.li-next {
+        @apply text-left;
+      }
+      &.li-prev {
+        @apply text-right;
+      }
+    }
+  }
 }

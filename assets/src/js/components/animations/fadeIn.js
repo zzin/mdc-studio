@@ -9,18 +9,24 @@ const fadeIn = (container) => {
 	const getTheTitle = document.body.getAttribute('data-title');
 	loadingTitle.innerHTML = getTheTitle;
 	const tl = gsap.timeline();
-	tl.to(loading, {
-		delay: 0.25,
-		backgroundColor: bgColor,
-		duration: 0.75,
-		ease: 'none',
-	})
+	tl.set(loadingTitle, { yPercent: 20 })
+		.to(loading, {
+			delay: 0.25,
+			backgroundColor: bgColor,
+			duration: 0.75,
+			ease: 'none',
+		})
 		.to(
 			loadingTitle,
-			{ autoAlpha: 1, y: '-50%', duration: 0.25, ease: 'Power3.easeOut' },
+			{ autoAlpha: 1, yPercent: 0, duration: 0.25, ease: 'Power3.easeOut' },
 			'<'
 		)
-		.to(loadingTitle, { autoAlpha: 0, y: '-100%', duration: 0.25, delay: 0.5 })
+		.to(loadingTitle, {
+			autoAlpha: 0,
+			yPercent: -100,
+			duration: 0.25,
+			delay: 0.5,
+		})
 		.to(
 			loading,
 			{

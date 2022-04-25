@@ -6,16 +6,10 @@
 
     get_template_part('template-parts/content', 'single');
 
-    echo '<ul class="relative flex w-full justify-between bg-white z-10">';
-    echo '<li>' . get_previous_post_link() . '</li>';
-    echo '<li>' . get_next_post_link() . '</li>';
+    echo '<ul class="nav-control">';
+    echo '<li class="li-next">' . get_next_post_link('%link', '<span>%title</span>') . '</li>';
+    echo '<li class="li-prev">' . get_previous_post_link('%link', '<span>%title</span>') . '</li>';
     echo '</ul>';
-  // the_post_navigation(
-  //   array(
-  //     'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'zeein') . '</span> <span class="nav-title">%title</span>',
-  //     'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'zeein') . '</span> <span class="nav-title">%title</span>',
-  //   )
-  // );
 
   endwhile; // End of the loop.
   ?>

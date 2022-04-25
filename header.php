@@ -78,6 +78,6 @@
 
     <div class="loading">
       <div class="loading--wrap">
-        <strong class="loading--title">loading</strong>
+        <strong class="loading--title"></strong>
       </div>
     </div>

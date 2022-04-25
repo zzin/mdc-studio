@@ -4,7 +4,7 @@
     @apply relative w-full h-full bg-primary will-change-auto;
   }
   &--title {
-    @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-white tracking-wider text-2xl w-auto;
+    @apply absolute w-screen top-[50%] -translate-y-[50%] text-white tracking-wider text-4xl opacity-0 text-center;
   }
   // @apply flex fixed w-screen h-full bg-primary z-[40] top-0;
 }

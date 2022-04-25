@@ -5,8 +5,7 @@
       E : <a href="mailto:mdc_design@naver.com"><span class="text-black hover:underline">mdc_design@naver.com</span></a><br />
     </div>
     <div class="text-lg lg:text-xl">
-      Copyright © 2022. All rights reserved.<br />
-      Designed by zeein.co.kr
+      Copyright © 2022. All rights reserved.
     </div>
   </div>
 </footer>

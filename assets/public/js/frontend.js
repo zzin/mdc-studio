@@ -50,19 +50,21 @@ var fadeIn = function fadeIn(container) {
   var getTheTitle = document.body.getAttribute('data-title');
   loadingTitle.innerHTML = getTheTitle;
   var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline();
-  tl.to(loading, {
+  tl.set(loadingTitle, {
+    yPercent: 20
+  }).to(loading, {
     delay: 0.25,
     backgroundColor: bgColor,
     duration: 0.75,
     ease: 'none'
   }).to(loadingTitle, {
     autoAlpha: 1,
-    y: '-50%',
+    yPercent: 0,
     duration: 0.25,
     ease: 'Power3.easeOut'
   }, '<').to(loadingTitle, {
     autoAlpha: 0,
-    y: '-100%',
+    yPercent: -100,
     duration: 0.25,
     delay: 0.5
   }).to(loading, {
