@@ -201,8 +201,7 @@ var initCursor = function initCursor() {
     el.addEventListener('click', cbk);
   });
   (0,_swiper__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_photo__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_pageTitle__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_photo__WEBPACK_IMPORTED_MODULE_4__["default"])(); // initPageTitle();
 };
 
 _barba_core__WEBPACK_IMPORTED_MODULE_0___default().hooks.enter(function (data) {

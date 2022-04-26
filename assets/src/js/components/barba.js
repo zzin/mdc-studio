@@ -58,7 +58,7 @@ const initCursor = () => {
 	});
 	initSwiper();
 	initPhoto();
-	initPageTitle();
+	// initPageTitle();
 };
 
 barba.hooks.enter((data) => {
