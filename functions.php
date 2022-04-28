@@ -344,7 +344,7 @@ add_action('init', 'cptui_register_my_taxes_portfoliotag');
  * Custom nav walker
  */
 require get_template_directory() . '/inc/cssmenu-navwalker.php';
-// require get_template_directory() . '/inc/template-func.php';
+require get_template_directory() . '/inc/template-func.php';
 // require get_template_directory() . '/inc/template-admin.php';
 // require get_template_directory() . '/inc/template-api.php';
 // require get_template_directory() . '/inc/template-ajax.php';

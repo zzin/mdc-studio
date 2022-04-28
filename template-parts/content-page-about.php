@@ -1,8 +1,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <?php get_template_part('template-parts/split/entry', 'header-solid'); ?>
-  <div class="container-default mt-24 text-lg lg:text-xl">
+  <div class="container-default mt-24 text-xl lg:text-2xl">
     <h2 class="page-title">Our Story</h2>
-    <h3 class="text-3xl mt-6">May you be worthy of your life.</h3>
+    <h3 class="text-2xl lg:text-4xl mt-6">May you be worthy of your life.</h3>
     <p class="mt-8">
       MDC 는 당신의 삶속에 가치있게 깃들 수 있는 디자인을 선사하는 1인 브랜딩 스튜디오입니다.
     </p>
@@ -14,8 +14,8 @@
       개인(1:1) 혹은 기업간의 신뢰있는 컨설팅을 진행으로 프로젝트를 시작합니다.
     </p>
   </div>
-  <div class="container-default mt-24">
-    <h2 class="page-title">Our Services</h2>
+  <div class="container-default mt-28">
+    <h2 class="page-title">Our <span>Services</span></h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <div class="col-span-1 mb-10">
         <figure class="my-4">
@@ -270,8 +270,8 @@
             </g>
           </svg>
         </figure>
-        <h3 class="font-medium text-4xl text-center text-black">Brand Design</h3>
-        <ul class="text-2xl text-center mt-5">
+        <h3 class="font-medium text-3xl lg:text-4xl text-center text-black">Brand Design</h3>
+        <ul class="text-xl lg:text-2xl text-center mt-5">
           <li>Brnad Identity</li>
           <li>Corporate Identity</li>
           <li>Space Design</li>
@@ -547,8 +547,8 @@
             </g>
           </svg>
         </figure>
-        <h3 class="font-medium text-4xl text-center text-black">Package Design</h3>
-        <ul class="text-2xl text-center mt-5">
+        <h3 class="font-medium text-3xl lg:text-4xl text-center text-black">Package Design</h3>
+        <ul class="text-xl lg:text-2xl text-center mt-5">
           <li>Package Design</li>
           <li>Package Development</li>
           <li>Package Consulting</li>
@@ -971,8 +971,8 @@
             </g>
           </svg>
         </figure>
-        <h3 class="font-medium text-4xl text-center text-black">Visual Design</h3>
-        <ul class="text-2xl text-center mt-5">
+        <h3 class="font-medium text-3xl lg:text-4xl text-center text-black">Visual Design</h3>
+        <ul class="text-xl lg:text-2xl text-center mt-5">
           <li>Graphic Design</li>
           <li>Illustration Design</li>
           <li>Communication Design</li>
@@ -980,7 +980,11 @@
       </div>
     </div>
   </div>
-  <div class="container-default mt-24 text-lg lg:text-xl">
-    <h2 class="page-title">Our SNS</h2>
+  <div class="container-default mt-28 text-xl lg:text-2xl">
+    <h2 class="page-title">Our <span>SNS</span></h2>
+    <div class="flex items-center mt-4">
+      <i class="icon icon--instagram"></i>
+      <a href="https://www.instagram.com/mandacco_official/" target="_blank"><span class="text-black">mandacco_official</span></a>
+    </div>
   </div>
 </article>

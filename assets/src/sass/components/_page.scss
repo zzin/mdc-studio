@@ -1,5 +1,8 @@
 .page {
   .page-title {
-    @apply font-semibold text-2xl md:text-4xl lg:text-6xl text-black;
+    @apply font-light text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-black;
+    span {
+      @apply font-medium;
+    }
   }
 }

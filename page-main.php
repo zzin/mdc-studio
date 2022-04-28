@@ -65,18 +65,16 @@ get_header();
             $postImage = get_the_post_thumbnail_url($post->ID, 'full');
             $wrpClass = ($num === 0) ? '' : 'mt-4';
             $bgImg = ($boxClass[$num++] === 'sm') ? 'empty-hd.png' : 'empty.png';
-            echo '
-              <div class="photo--wrap relative overflow-hidden ' . $wrpClass . '">
-                <img src="' . get_stylesheet_directory_uri() . '/assets/public/images/' . $bgImg . '">
-                <img class="photo--wrap-img w-full object-cover absolute inset-0" src="' . $postImage . '">
-                <a href="' . get_permalink($post->ID) . '">
-                  <div class="photo--wrap-title absolute inset-0 bg-black/80 z-10 flex items-center justify-center opacity-0">
-                    <h3 class="h3 text-white text-3xl font-medium scale-0 opacity-0 text-center">' . $post->post_title . '</h3>
-                  </div>
-                </a>
-              </div>
-              ';
-
+            get_template_part(
+              'template-parts/split/split',
+              'photo',
+              array(
+                'img'     => $postImage,
+                'class'   => $wrpClass,
+                'bg'      => $bgImg,
+                'post'    => $post
+              )
+            );
           // echo '
           // <div class="photo--wrap relative overflow-hidden ' . $arrClass[$num++] . '">
           //   <img class="photo--wrap-img w-full object-cover" src="' . $postImage . '">

@@ -1,5 +1,7 @@
 <?php
 
+add_filter('big_image_size_threshold', '__return_false');
+
 class KboardObj
 {
   public $uid;
@@ -26,3 +28,22 @@ function GetKboard($uid = 1, $num = 5, $link)
   }
   return $rtnArray;
 }
+
+if (!function_exists('zeein_posted_title')) :
+  function zeein_posted_title()
+  {
+    the_title('<h2 class="content-title text-3xl font-medium text-black">', '</h2>');
+    $categories = get_the_category();
+    echo '<xmp>';
+    print_r($categories);
+    echo '</xmp>';
+    if (!empty($categories)) {
+      foreach ($categories as $category) :
+        echo '<xmp>';
+        print_r($category);
+        echo '</xmp>';
+        echo '<span>' . $category . '</span>';
+      endforeach;
+    }
+  }
+endif;
