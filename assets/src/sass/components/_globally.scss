@@ -6,4 +6,7 @@ html, body, .site {
   a {
     @apply outline-none;
   }
+  .word-break-keep-all {
+    word-break: keep-all;
+  }
 }

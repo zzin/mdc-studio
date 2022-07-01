@@ -13,10 +13,14 @@
   .container-single {
     @apply container mx-auto px-0 md:px-6 lg:px-8;
   }
+  .container-thin {
+    @apply container mx-auto px-6 lg:px-20;
+  }
 }
 
 @import './vendor/swiper';
 @import '../fonts/roboto';
 @import '../fonts/notoSansKR';
+@import '../fonts/campton';
 @import './components/index';
 

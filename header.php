@@ -36,7 +36,7 @@
   ?>
 </head>
 
-<body <?php body_class($addClass); ?> data-barba="wrapper" data-bg="<?= $bgLoading ?>" data-title="<?= $getTheTitle ?>">
+<body <?php body_class($addClass); ?> data-barba="wrapper" data-bg="<?= $bgLoading ?>" data-title="<?= strtoupper($getTheTitle) ?>">
   <?php wp_body_open(); ?>
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'zeein'); ?></a>

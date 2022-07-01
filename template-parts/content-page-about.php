@@ -1,20 +1,16 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <?php get_template_part('template-parts/split/entry', 'header-solid'); ?>
-  <div class="container-default mt-24 text-xl lg:text-2xl">
-    <h2 class="page-title">Our Story</h2>
-    <h3 class="text-2xl lg:text-4xl mt-6">May you be worthy of your life.</h3>
-    <p class="mt-8">
-      MDC 는 당신의 삶속에 가치있게 깃들 수 있는 디자인을 선사하는 1인 브랜딩 스튜디오입니다.
-    </p>
-    <p class="mt-8">
-      브랜드의 가치있는 이야기를 디자인에 고스란히 담을 수 있도록 고객의 니즈와 서비스를 위해 항상 점진적으로 발전할 수 있도록 개발하고 있습니다.<br />현대의 흐름에 맞게 늘 새로운 문화를 현재와 어우러져 시각적으로 표현하며, 더 나은 방향성과 핵심적인 가치관을 담을 수 있는 브랜딩을 선사합니다.
-    </p>
-    <p class="mt-8">
+  <div class="container-thin mt-24 text-lg lg:text-xl">
+    <h2 class="page-title">Our <span>Story</span></h2>
+    <h3 class="text-xl lg:text-2xl mt-5 lg:mt-10 text-primary font-semibold">May you be worthy of your life.</h3>
+    <p class="mt-4 lg:mt-8 lg:word-break-keep-all">
+      MDC 는 당신의 삶속에 가치있게 깃들 수 있는 디자인을 선사하는 1인 브랜딩 스튜디오입니다.<br />
+      브랜드의 가치있는 이야기를 디자인에 고스란히 담을 수 있도록 고객의 니즈와 서비스를 위해 항상 점진적으로 발전할 수 있도록 개발하고 있습니다.현대의 흐름에 맞게 늘 새로운 문화를 현재와 어우러져 시각적으로 표현하며, 더 나은 방향성과 핵심적인 가치관을 담을 수 있는 브랜딩을 선사합니다.<br />
       MDC 는 'CCC System' - Custom Care Consulting 시스템으로 자유롭게 소통하며 브랜드의 컨셉 및 방향성을 위해
       개인(1:1) 혹은 기업간의 신뢰있는 컨설팅을 진행으로 프로젝트를 시작합니다.
     </p>
   </div>
-  <div class="container-default mt-28">
+  <div class="container-thin mt-12 lg:mt-28">
     <h2 class="page-title">Our <span>Services</span></h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <div class="col-span-1 mb-10">
@@ -980,7 +976,7 @@
       </div>
     </div>
   </div>
-  <div class="container-default mt-28 text-xl lg:text-2xl">
+  <div class="container-thin mt-28 text-xl lg:text-2xl">
     <h2 class="page-title">Our <span>SNS</span></h2>
     <div class="flex items-center mt-4">
       <i class="icon icon--instagram"></i>

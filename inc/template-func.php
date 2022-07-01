@@ -32,18 +32,26 @@ function GetKboard($uid = 1, $num = 5, $link)
 if (!function_exists('zeein_posted_title')) :
   function zeein_posted_title()
   {
-    the_title('<h2 class="content-title text-3xl font-medium text-black">', '</h2>');
-    $categories = get_the_category();
-    echo '<xmp>';
-    print_r($categories);
-    echo '</xmp>';
-    if (!empty($categories)) {
-      foreach ($categories as $category) :
-        echo '<xmp>';
-        print_r($category);
-        echo '</xmp>';
-        echo '<span>' . $category . '</span>';
-      endforeach;
+    the_title('<h2 class="content-title text-3xl font-medium text-black mb-4">', '</h2>');
+
+    $taxonomy = get_the_terms(get_the_ID(), 'portfoliotax');
+    if ($taxonomy && !is_wp_error($taxonomy)) {
+      $taxonomy_name = array();
+      foreach ($taxonomy as $term) {
+        $taxonomy_name[] = $term->name;
+      }
+      $say_taxonomy = join(', ', $taxonomy_name);
+      printf('<h3 class="text-xl font-medium mb-2">Category : %s</h3>', esc_html(strtoupper($say_taxonomy)));
+    }
+
+    $tags = get_the_terms(get_the_ID(), 'portfoliotag');
+    if ($tags && !is_wp_error($tags)) {
+      $tags_name = array();
+      foreach ($tags as $term) {
+        $tags_name[] = $term->name;
+      }
+      $say_terms = join(', ', $tags_name);
+      printf('<h3 class="text-xl font-medium mb-2">Tag : %s</h3>', esc_html(strtoupper($say_terms)));
     }
   }
 endif;

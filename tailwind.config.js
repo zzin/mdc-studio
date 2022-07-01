@@ -7,7 +7,7 @@ module.exports = {
 	],
 	theme: {
 		fontFamily: {
-			sans: ['roboto', 'NotoSansKR', 'sans-serif', 'ui-sans-serif'],
+			sans: ['campton', 'NotoSansKR', 'sans-serif', 'ui-sans-serif'],
 		},
 		extend: {
 			colors: {
