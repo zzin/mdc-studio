@@ -21,19 +21,22 @@
   }
 
   .nav-control {
-    @apply relative flex w-full justify-between bg-white z-10 container-full;
+    @apply relative flex w-full justify-between bg-white z-10 container-full flex-col lg:flex-row;
     &>li {
       @apply flex-1;
       a {
         span {
-          @apply text-black;
+          @apply text-xl text-black hover:underline;
         }
       }
       &.li-next {
         @apply text-left;
       }
       &.li-prev {
-        @apply text-right;
+        @apply lg:text-right;
+      }
+      .li-title {
+        @apply text-xs tracking-wide uppercase mt-4 text-black/40;
       }
     }
   }

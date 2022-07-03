@@ -29,7 +29,7 @@
       zeein_posted_title();
       ?>
     </div>
-    <div class="container-single">
+    <div class="container-single mt-6">
 
       <?php
       the_content(

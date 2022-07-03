@@ -1,0 +1,39 @@
+.form-group {
+  .input-group {
+    @apply relative;
+    label {
+      @apply absolute top-1/2 -translate-y-1/2 pointer-events-none;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      @apply pl-20 bg-white rounded-none border-transparent ring-0 border-b-black placeholder:text-black/20 h-12 leading-none w-full;
+    }
+  }
+  .checkbox-group {
+    label {
+      @apply relative pl-6
+        before:absolute before:content-[''] before:left-0 before:border before:border-black before:w-5 before:h-5 before:z-20
+        after:absolute after:content-[''] after:left-0 after:bg-white after:w-5 after:h-5 after:z-10;
+      span {
+        @apply text-black/40;
+      }
+    }
+    input[type="checkbox"] {
+      @apply appearance-none w-0 h-0 absolute opacity-0;
+      &:checked {
+        &+label {
+          @apply after:bg-black/90;
+        }
+      }
+    }
+  }
+  .textarea-group {
+    textarea {
+      @apply appearance-none rounded-none border border-solid border-black w-full h-40 placeholder:text-black/20 ring-0;
+    }
+  }
+  button[type="submit"] {
+    @apply appearance-none leading-none text-xl font-semibold text-primary;
+  }
+}

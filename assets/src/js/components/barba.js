@@ -5,6 +5,7 @@ import { fadeIn, fadeOut } from './animations';
 import initSwiper from './swiper';
 import initPhoto from './photo';
 import initPageTitle from './pageTitle';
+import initHeader from './header';
 
 const body = document.body;
 barba.use(barbaPrefetch);
@@ -58,6 +59,7 @@ const initCursor = () => {
 	});
 	initSwiper();
 	initPhoto();
+	initHeader();
 	// initPageTitle();
 };
 

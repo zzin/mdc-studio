@@ -43289,7 +43289,49 @@ var initPageTitle = function initPageTitle() {
 };
 
 /* harmony default export */ const pageTitle = ((/* unused pure expression or super */ null && (initPageTitle)));
+;// CONCATENATED MODULE: ./assets/src/js/components/header.js
+
+
+gsapWithCSS.registerPlugin(ScrollTrigger_ScrollTrigger);
+
+var initHeader = function initHeader() {
+  // console.log('init Header');
+  // const postThumbnails = document.querySelectorAll(
+  // 	'.portfolio .post-thumbnail'
+  // );
+  // if (postThumbnails.length > 0) {
+  // 	Array.from(postThumbnails).forEach((el) => {
+  // 		const tl = gsap
+  // 			.timeline({
+  // 				scrollTrigger: {
+  // 					trigger: el,
+  // 					scrub: 1.5,
+  // 					// markers: true,
+  // 					start: 'bottom+10 top',
+  // 					duration: '100%',
+  // 				},
+  // 			})
+  // 			.to(el, { scale: 1.25, transformOrigin: 'bottom center' });
+  // 	});
+  // }
+  gsapWithCSS.utils.toArray('.portfolio .post-thumbnail').forEach(function (el, i) {
+    var tl = gsapWithCSS.timeline({
+      scrollTrigger: {
+        trigger: el,
+        scrub: 1.5,
+        start: 'bottom+10 top',
+        duration: '100%'
+      }
+    }).to(el, {
+      scale: 1.25,
+      transformOrigin: 'bottom center'
+    });
+  });
+};
+
+/* harmony default export */ const header = (initHeader);
 ;// CONCATENATED MODULE: ./assets/src/js/components/barba.js
+
 
 
 
@@ -43337,7 +43379,8 @@ var initCursor = function initCursor() {
     el.addEventListener('click', cbk);
   });
   swiper();
-  photo(); // initPageTitle();
+  photo();
+  header(); // initPageTitle();
 };
 
 barba_umd_default().hooks.enter(function (data) {

@@ -51,9 +51,9 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "@barba/prefetch": "^2.1.10",
-    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
     "enquire.js": "^2.1.6",
-    "gsap": "npm:@gsap/business@^3.10.4",
+    "gsap": "npm:@gsap/business",
     "imagesloaded": "^5.0.0",
     "jquery": "^3.6.0",
     "swiper": "7.4.1",

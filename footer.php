@@ -5,7 +5,7 @@
       E : <a href="mailto:mdc_design@naver.com"><span class="text-black/40 hover:underline">mdc_design@naver.com</span></a><br />
     </div>
     <div class="text-lg lg:text-xl">
-      Copyright <span class="relative text-2xl lg:text-3xl top-[2px] lg:top-1">©</span> 2022. All rights reserved.
+      Copyright <span class="relative text-2xl lg:text-3xl top-[2px] lg:top-1 font-normal text-primary">©</span> 2022. All rights reserved.
     </div>
   </div>
 </footer>

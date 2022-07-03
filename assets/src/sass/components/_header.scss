@@ -6,7 +6,7 @@
         .menu-item {
           .menu-link {
             .span {
-              @apply text-xs md:text-sm lg:text-base text-black px-3 uppercase;
+              @apply text-xs md:text-sm lg:text-base text-black px-3 uppercase font-semibold;
             }
           }
         }
