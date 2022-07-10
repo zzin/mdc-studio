@@ -1,0 +1,4 @@
+.btn-default {
+  @apply inline-block min-w-[200px] border border-solid border-primary bg-white p-4 pt-5 text-center text-sm font-medium tracking-normal text-primary transition-colors
+  hover:bg-primary/10;
+}

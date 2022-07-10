@@ -176,17 +176,12 @@ add_action('admin_enqueue_scripts', 'zeein_scripts_admin');
 // footer query init
 function footer_somethings()
 {
-	global $portfolioQuery;
 	wp_localize_script(
 		'_zeein-frontend-scripts',
 		'frontendAjaxObject',
 		array(
 			'ajaxurl' => admin_url('admin-ajax.php'),
-			'themeurl' => get_template_directory_uri(),
-			'posts' => ($portfolioQuery) ? json_encode($portfolioQuery->query_vars) : null,
-			'currentPage' => 1,
-			'totalPortfolio' => ($portfolioQuery) ? $portfolioQuery->found_posts : null,
-			'maxPage' => ($portfolioQuery) ? $portfolioQuery->max_num_pages : null,
+			'themeurl' => get_template_directory_uri()
 		)
 	);
 }
@@ -224,7 +219,7 @@ if (defined('JETPACK__VERSION')) {
  * Author : zeein81@gmail.com
  */
 
-function cptui_register_my_cpts_portfolio()
+function zeein_custom_post_type()
 {
 
 	/**
@@ -260,13 +255,44 @@ function cptui_register_my_cpts_portfolio()
 		"supports" => ["title", "editor", "thumbnail", "page-attributes"],
 		"show_in_graphql" => false,
 	];
-
 	register_post_type("portfolio", $args);
+
+	$labels = [
+		"name" => __("프로젝트 문의", "zeein"),
+		"singular_name" => __("프로젝트 문의", "zeein"),
+	];
+
+	$args = [
+		"label" => __("프로젝트 문의", "zeein"),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => ["slug" => "request", "with_front" => true],
+		"query_var" => true,
+		"menu_icon" => "dashicons-media-document",
+		"supports" => ["title", "editor", "thumbnail", "page-attributes"],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type("request", $args);
 }
 
-add_action('init', 'cptui_register_my_cpts_portfolio');
+add_action('init', 'zeein_custom_post_type');
 
-function cptui_register_my_taxes_portfoliotax()
+function zeein_custom_taxonomy()
 {
 
 	/**
@@ -300,7 +326,7 @@ function cptui_register_my_taxes_portfoliotax()
 	];
 	register_taxonomy("portfoliotax", ["portfolio"], $args);
 }
-add_action('init', 'cptui_register_my_taxes_portfoliotax');
+add_action('init', 'zeein_custom_taxonomy');
 
 function cptui_register_my_taxes_portfoliotag()
 {
@@ -345,9 +371,9 @@ add_action('init', 'cptui_register_my_taxes_portfoliotag');
  */
 require get_template_directory() . '/inc/cssmenu-navwalker.php';
 require get_template_directory() . '/inc/template-func.php';
+require get_template_directory() . '/inc/template-ajax.php';
 // require get_template_directory() . '/inc/template-admin.php';
 // require get_template_directory() . '/inc/template-api.php';
-// require get_template_directory() . '/inc/template-ajax.php';
 // require get_template_directory() . '/inc/template-save.php';
 
 // require get_template_directory() . '/inc/template-kboard.php';

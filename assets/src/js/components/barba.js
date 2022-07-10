@@ -6,6 +6,7 @@ import initSwiper from './swiper';
 import initPhoto from './photo';
 import initPageTitle from './pageTitle';
 import initHeader from './header';
+import initRequest from './request';
 
 const body = document.body;
 barba.use(barbaPrefetch);
@@ -78,6 +79,14 @@ barba.hooks.beforeEnter((data) => {
 // });
 
 barba.init({
+	views: [
+		{
+			namespace: 'page-contact',
+			afterEnter(data) {
+				initRequest();
+			},
+		},
+	],
 	transitions: [
 		{
 			name: 'general-transition',
