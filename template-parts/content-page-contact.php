@@ -11,19 +11,19 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
         <div class="input-group">
           <label for="company-name">회사명 </label>
-          <input type="text" id="company-name" name="company-name" placeholder="회사명을 알려주세요." value="클라우드폴더" />
+          <input type="text" id="company-name" name="company-name" placeholder="회사명을 알려주세요." value="" />
         </div>
         <div class="input-group">
           <label for="company-manager">담당자 <span class="text-red-600 text-xl">*</span></label>
-          <input type="text" id="company-manager" name="company-manager" placeholder="담당자분 이름을 알려주세요." value="김영진" required />
+          <input type="text" id="company-manager" name="company-manager" placeholder="담당자분 이름을 알려주세요." value="" required />
         </div>
         <div class="input-group">
           <label for="company-phone">연락처 <span class="text-red-600 text-xl">*</span></label>
-          <input type="tel" id="company-phone" name="company-phone" placeholder="연락처를 알려주세요." value="010-2738-1110" required />
+          <input type="tel" id="company-phone" name="company-phone" placeholder="연락처를 알려주세요." value="" required />
         </div>
         <div class="input-group">
           <label for="company-email">이메일 <span class="text-red-600 text-xl">*</span></label>
-          <input type="email" id="company-email" name="company-email" placeholder="이메일 주소를 알려주세요." value="zeein81@gmail.com" required />
+          <input type="email" id="company-email" name="company-email" placeholder="이메일 주소를 알려주세요." value="" required />
         </div>
       </div>
       <h3 class="mt-14 text-lg lg:text-xl font-semibold">의뢰 정보 <small class="font-normal text-black/40">중복 선택 가능</small></h3>
